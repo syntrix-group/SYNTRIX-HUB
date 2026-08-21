@@ -1,0 +1,13 @@
+:root{
+  --bg: #0A0D12;
+  --panel: #10141C;
+  --panel-2: #151B26;
+  --line: #232A38;
+  --text: #E8EBF2;
+  --muted: #8891A3;
+  --accent: #35E0C4;
+  --accent-2: #7C8CFF;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
