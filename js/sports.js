@@ -6,7 +6,7 @@ const sportsLinks = [
   { name: 'Threads', icon: 'fa-brands fa-threads', url: 'https://www.threads.com/@syntrixsports' },
   { name: 'YouTube', icon: 'fa-brands fa-youtube', url: 'https://www.youtube.com/@SYNTRIXSPORTS' },
   { name: 'Kick', icon: 'fa-solid fa-tv', url: 'https://kick.com/syntrix-sports' },
-  { name: 'whatsapp', icon: 'fa-solid fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb90W1005MUnY1lm5J2t' },
+  { name: 'whatsapp', icon: 'fa-brands fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb90W1005MUnY1lm5J2t' },
 ];
 
 const grid = document.getElementById('links-grid');
