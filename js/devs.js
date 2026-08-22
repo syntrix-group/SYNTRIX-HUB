@@ -7,6 +7,8 @@ const devsLinks = [
   { name: 'WhatsApp', icon: 'fa-brands fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb33LlIIXnlr8z9LQD3t' },
   { name: 'X', icon: 'fa-brands fa-x-twitter', url: 'https://x.com/SYNTRYXDEV2y' },
   { name: 'Threads', icon: 'fa-brands fa-threads', url: 'https://www.threads.com/@syntrixdevs' },
+    { name: 'Kick', icon: 'fa-solid fa-tv', url: 'https://kick.com/cash-luck' },
+
 ];
 
 const grid = document.getElementById('links-grid');
