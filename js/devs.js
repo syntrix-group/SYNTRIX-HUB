@@ -7,7 +7,6 @@ const devsLinks = [
   { name: 'WhatsApp', icon: 'fa-brands fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb33LlIIXnlr8z9LQD3t' },
   { name: 'X', icon: 'fa-brands fa-x-twitter', url: 'https://x.com/SYNTRYXDEV2y' },
   { name: 'Threads', icon: 'fa-brands fa-threads', url: 'https://www.threads.com/@syntrixdevs' },
-  { name: 'Atom.bio', icon: 'fa-solid fa-link', url: 'https://www.atom.bio/syntrixsports' }
 ];
 
 const grid = document.getElementById('links-grid');
