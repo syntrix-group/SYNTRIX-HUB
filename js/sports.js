@@ -7,6 +7,8 @@ const sportsLinks = [
   { name: 'YouTube', icon: 'fa-brands fa-youtube', url: 'https://www.youtube.com/@SYNTRIXSPORTS' },
   { name: 'Kick', icon: 'fa-solid fa-tv', url: 'https://kick.com/syntrix-sports' },
   { name: 'whatsapp', icon: 'fa-brands fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb90W1005MUnY1lm5J2t' },
+    { name: 'Telegram', icon: 'fa-brands fa-telegram', url: 'https://t.me/syntrix_devs' },
+
 ];
 
 const grid = document.getElementById('links-grid');
