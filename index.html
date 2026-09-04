@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grupo Syntrix — Hub</title>
+<link rel="icon" type="image/png" href="logos/syntrix-group.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="css/tokens.css">
@@ -16,7 +17,7 @@
 <nav class="hub-nav">
   <div class="hub-nav__brand">
     <img src="logos/syntrix-group.png" alt="Logo Grupo Syntrix" class="brand-logo" onerror="this.remove()">
-    <span class="dot"></span> SYNTRIX
+    <span>Syntrix Group</span>
   </div>
   <div class="hub-nav__links">
     <a href="html/devs.html">Devs</a>
@@ -25,82 +26,97 @@
 </nav>
 
 <header class="hero">
-  <div class="hero__grid" aria-hidden="true"></div>
-  <div class="hero__content">
-    <p class="eyebrow">Grupo Syntrix</p>
-    <h1>Un ecosistema de marcas<br> construyendo en paralelo.</h1>
-    <p class="hero__sub">Distintas disciplinas, un mismo origen. Cada división de Syntrix opera con su propia identidad y su propio ritmo — conectadas por la misma forma de trabajar.</p>
+  <div class="hero__text">
+    <h1>Un grupo que crece<br>dividiendo su enfoque,<br>no su identidad.</h1>
+    <p class="hero__sub">Cada división de Syntrix trabaja en un terreno distinto — software, deporte, lo que siga — pero comparte el mismo origen y la misma forma de construir.</p>
 
     <div class="counters" id="counters">
-      <div class="counter-card">
-        <span class="counter-num" data-target="0" id="c-empresas">0</span>
-        <span class="counter-label">divisiones activas</span>
+      <div class="counter">
+        <span class="counter__num" id="c-empresas">0</span>
+        <span class="counter__label">divisiones activas</span>
       </div>
-      <div class="counter-card">
-        <span class="counter-num" data-target="0" id="c-redes">0</span>
-        <span class="counter-label">canales conectados</span>
+      <div class="counter">
+        <span class="counter__num" id="c-redes">0</span>
+        <span class="counter__label">canales conectados</span>
       </div>
-      <div class="counter-card">
-        <span class="counter-num" data-target="0" id="c-anio">0</span>
-        <span class="counter-label">año de origen</span>
+      <div class="counter">
+        <span class="counter__num" id="c-anio">0</span>
+        <span class="counter__label">en marcha desde</span>
       </div>
     </div>
+  </div>
+
+  <div class="hero__orbit" aria-hidden="true">
+    <svg id="orbit-svg" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle class="orbit-ring" cx="210" cy="210" r="150" stroke="#1B2029" stroke-width="1"/>
+      <circle class="orbit-ring orbit-ring--inner" cx="210" cy="210" r="94" stroke="#1B2029" stroke-width="1"/>
+
+      <g id="orbit-outer" class="orbit-spin">
+        <g class="orbit-node orbit-node--sports" transform="translate(210,60)">
+          <circle r="24" fill="#151920" stroke="#7C8CFF" stroke-width="1.5"/>
+          <g class="orbit-node__counter-spin">
+            <text text-anchor="middle" dy="5" class="orbit-node__label">Sports</text>
+          </g>
+        </g>
+        <g class="orbit-node orbit-node--next" transform="translate(70,320)">
+          <circle r="13" fill="none" stroke="#565F70" stroke-width="1" stroke-dasharray="3 3"/>
+        </g>
+      </g>
+
+      <g id="orbit-inner" class="orbit-spin orbit-spin--reverse">
+        <g class="orbit-node orbit-node--devs" transform="translate(210,116)">
+          <circle r="22" fill="#151920" stroke="#4CE0B3" stroke-width="1.5"/>
+          <g class="orbit-node__counter-spin orbit-node__counter-spin--reverse">
+            <text text-anchor="middle" dy="5" class="orbit-node__label">Devs</text>
+          </g>
+        </g>
+      </g>
+
+      <circle class="orbit-core" cx="210" cy="210" r="34" fill="#151920" stroke="#4CE0B3" stroke-width="1.5"/>
+      <text x="210" y="215" text-anchor="middle" class="orbit-core__label">SNX</text>
+    </svg>
   </div>
 </header>
 
 <main class="divisions">
-  <p class="section-label">// divisiones</p>
-  <div class="divisions__grid">
-
-    <a href="html/devs.html" class="division-card division-card--devs">
-      <div class="division-card__top">
-        <span class="division-card__icon">
-          <img src="logos/syntrix-devs.png" alt="Logo Syntrix Devs" onerror="this.remove(); this.parentElement.querySelector('i').style.display='inline-block';">
-          <i class="fa-solid fa-code" style="display:none;"></i>
-        </span>
-        <span class="division-card__tag">01</span>
-      </div>
-      <h2>Syntrix Devs</h2>
-      <p>Desarrollo de software y productos digitales.</p>
-      <span class="division-card__cta">Entrar <i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-
-    <a href="html/sports.html" class="division-card division-card--sports">
-      <div class="division-card__top">
-        <span class="division-card__icon">
-          <img src="logos/syntrix-sports.png" alt="Logo Syntrix Sports" onerror="this.remove(); this.parentElement.querySelector('i').style.display='inline-block';">
-          <i class="fa-solid fa-chart-line" style="display:none;"></i>
-        </span>
-        <span class="division-card__tag">02</span>
-      </div>
-      <h2>Syntrix Sports</h2>
-      <p>Analítica deportiva y torneos.</p>
-      <span class="division-card__cta">Entrar <i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-
-    <div class="division-card division-card--next">
-      <div class="division-card__top">
-        <i class="fa-solid fa-plus"></i>
-        <span class="division-card__tag">＋</span>
-      </div>
-      <h2>Próxima división</h2>
-      <p>El grupo sigue en expansión.</p>
+  <div class="division-row" id="division-devs">
+    <div class="division-row__media">
+      <img src="logos/syntrix-devs.png" alt="Logo Syntrix Devs" onerror="this.remove(); this.nextElementSibling.style.display='flex';">
+      <div class="division-row__fallback" style="display:none;"><i class="fa-solid fa-code"></i></div>
     </div>
+    <div class="division-row__body">
+      <h2>Syntrix Devs</h2>
+      <p>Desarrollo de software y productos digitales para el grupo y sus clientes.</p>
+      <a href="html/devs.html" class="division-row__link">Ver canales de Devs <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
 
+  <div class="division-row division-row--reverse" id="division-sports">
+    <div class="division-row__media division-row__media--sports">
+      <img src="logos/syntrix-sports.png" alt="Logo Syntrix Sports" onerror="this.remove(); this.nextElementSibling.style.display='flex';">
+      <div class="division-row__fallback" style="display:none;"><i class="fa-solid fa-chart-line"></i></div>
+    </div>
+    <div class="division-row__body">
+      <h2>Syntrix Sports</h2>
+      <p>Analítica deportiva y organización de torneos.</p>
+      <a href="html/sports.html" class="division-row__link division-row__link--sports">Ver canales de Sports <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
   </div>
 </main>
 
 <footer class="hub-footer">
   <span>© <span id="year"></span> Grupo Syntrix</span>
   <div class="hub-footer__social">
-    <a href="https://www.instagram.com/syntrixdevs" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@syntrix_devs" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
-    <a href="https://www.youtube.com/@syntrix_devs" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+    <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/orbit.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

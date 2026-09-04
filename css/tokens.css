@@ -1,13 +1,12 @@
 :root{
-  --bg: #0A0D12;
-  --panel: #10141C;
-  --panel-2: #151B26;
-  --line: #232A38;
-  --text: #E8EBF2;
-  --muted: #8891A3;
-  --accent: #35E0C4;
+  --bg: #0B0D10;
+  --panel: #151920;
+  --line: #262B33;
+  --text: #EDEFF3;
+  --muted: #8D94A3;
+  --accent: #4CE0B3;
+  --accent-dim: #2E7C63;
   --accent-2: #7C8CFF;
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
 }

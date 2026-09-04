@@ -1,14 +1,12 @@
 const sportsLinks = [
   { name: 'Instagram', icon: 'fa-brands fa-instagram', url: 'https://www.instagram.com/syntrixsports' },
-  { name: 'TikTok', icon: 'fa-brands fa-tiktok', url: 'https://www.tiktok.com/@syntrixsports' },
+  { name: 'TikTok', icon: 'fa-brands fa-tiktok', url: 'https://www.tiktok.com/@syntrix_sports_oficial' },
   { name: 'Facebook', icon: 'fa-brands fa-facebook', url: 'https://www.facebook.com/profile.php?id=61593664612517' },
   { name: 'X', icon: 'fa-brands fa-x-twitter', url: 'https://x.com/SYNTRIXSPOz6' },
-  { name: 'Threads', icon: 'fa-brands fa-threads', url: 'https://www.threads.com/@syntrixsports' },
+  { name: 'Threads', icon: 'fa-brands fa-threads', url: 'https://www.threads.com/@syntrix_sports_oficial' },
   { name: 'YouTube', icon: 'fa-brands fa-youtube', url: 'https://www.youtube.com/@SYNTRIXSPORTS' },
   { name: 'Kick', icon: 'fa-solid fa-tv', url: 'https://kick.com/syntrix-sports' },
-  { name: 'whatsapp', icon: 'fa-brands fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb90W1005MUnY1lm5J2t' },
-    { name: 'Telegram', icon: 'fa-brands fa-telegram', url: 'https://t.me/syntrix_devs' },
-
+  { name: 'WhatsApp', icon: 'fa-brands fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb90W1005MUnY1lm5J2t' }
 ];
 
 const grid = document.getElementById('links-grid');
@@ -19,8 +17,8 @@ sportsLinks.forEach(link => {
   a.href = link.url;
   a.target = '_blank';
   a.rel = 'noopener';
-  a.className = 's-link-card';
-  a.innerHTML = `<i class="${link.icon}"></i><span>${link.name}</span>`;
+  a.className = 's-link-row';
+  a.innerHTML = `<i class="${link.icon}"></i><span>${link.name}</span><i class="fa-solid fa-arrow-up-right"></i>`;
 
   a.addEventListener('click', (e) => {
     e.preventDefault();
@@ -31,10 +29,10 @@ sportsLinks.forEach(link => {
       showCancelButton: true,
       confirmButtonText: 'Continuar',
       cancelButtonText: 'Cancelar',
-      background: '#10141C',
-      color: '#E8EBF2',
+      background: '#151920',
+      color: '#EDEFF3',
       confirmButtonColor: '#7C8CFF',
-      cancelButtonColor: '#232A38'
+      cancelButtonColor: '#262B33'
     }).then((result) => {
       if (result.isConfirmed) window.open(link.url, '_blank');
     });

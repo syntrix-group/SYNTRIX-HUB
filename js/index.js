@@ -1,15 +1,13 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Los valores de los contadores se derivan de datos reales del sitio,
-// no de números escritos a mano en el HTML.
 const socialChannels = [
   'instagram-devs','tiktok-devs','telegram-devs','facebook-devs',
-  'youtube-devs','kick-devs','whatsapp-devs','x-devs','atombio-devs',
+  'youtube-devs','whatsapp-devs','x-devs','threads-devs',
   'instagram-sports','tiktok-sports','facebook-sports','x-sports',
-  'threads-sports','youtube-sports','kick-sports','atombio-sports'
+  'threads-sports','youtube-sports','kick-sports','whatsapp-sports'
 ];
 
-const divisionCount = document.querySelectorAll('.division-card:not(.division-card--next)').length;
+const divisionCount = document.querySelectorAll('.division-row').length;
 
 const counters = [
   { el: document.getElementById('c-empresas'), target: divisionCount },
@@ -18,9 +16,8 @@ const counters = [
 ];
 
 function animateCounter({ el, target }) {
-  const duration = 1200;
+  const duration = 1100;
   const start = performance.now();
-
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);

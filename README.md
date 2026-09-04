@@ -12,16 +12,16 @@ Hub de redes sociales del **Grupo Syntrix**. Presenta las divisiones del grupo y
 - HTML5, CSS3, JavaScript (vanilla)
 - [Bootstrap 5](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/)
-- [SweetAlert2](https://sweetalert2.github.io/)
+- [SweetAlert2](https://sweetalert2.github.io/) — confirmación antes de salir a redes externas
+- [GSAP](https://gsap.com/) — animación orbital continua del hub central
 
 Proyecto 100% frontend, sin backend ni base de datos.
 
 ## Estructura
 
-```
+```text
 SYNTRIX-HUB/
 ├── html/
-│   ├── index.html
 │   ├── devs.html
 │   └── sports.html
 ├── css/
@@ -31,17 +31,24 @@ SYNTRIX-HUB/
 │   └── sports.css
 ├── js/
 │   ├── index.js
+│   ├── orbit.js
 │   ├── devs.js
 │   └── sports.js
-└── logos/
-    ├── syntrix-group.png
-    ├── syntrix-devs.png
-    └── syntrix-sports.png
+├── logos/
+│   ├── syntrix-group.png
+│   ├── syntrix-devs.png
+│   └── syntrix-sports.png
+├── index.html
+└── README.md
 ```
+
+## Analytics
+
+Cada división tiene su propia propiedad de Google Analytics (GA4), conectada de forma independiente en devs.html y sports.html.
 
 ## Demo
 
-🔗 https://syntrixgroupcuentaprincipal-crypto.github.io/SYNTRIX-HUB/
+🔗 [Demo](https://syntrixgroupcuentaprincipal-crypto.github.io/SYNTRIX-HUB/)
 
 ## Licencia
 
