@@ -2,121 +2,243 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo Syntrix — Hub</title>
-<link rel="icon" type="image/png" href="logos/syntrix-group.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Syntrix Group — Tecnología y deporte</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="../logos/syntrix-group.png">
 </head>
 <body>
+<!--version numero 3-->
+<nav class="nav"><div class="wrap">
+  <a href="index.html" class="brand"><i></i>Syntrix Group</a>
+  <ul>
+    <li><a href="#grupo">El grupo</a></li>
+    <li><a href="#divisiones">Divisiones</a></li>
+    <li><a href="#enfoque">Enfoque</a></li>
+    <li><a href="#tecnologias">Tecnologías</a></li>
+  </ul>
+  <a href="#contacto" class="btn">Contacto</a>
+</div></nav>
 
-<nav class="hub-nav">
-  <div class="hub-nav__brand">
-    <img src="logos/syntrix-group.png" alt="Logo Grupo Syntrix" class="brand-logo" onerror="this.remove()">
-    <span>Syntrix Group</span>
-  </div>
-  <div class="hub-nav__links">
-    <a href="html/devs.html">Devs</a>
-    <a href="html/sports.html">Sports</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="hero__text">
-    <h1>Un grupo que crece<br>dividiendo su enfoque,<br>no su identidad.</h1>
-    <p class="hero__sub">Cada división de Syntrix trabaja en un terreno distinto — software, deporte, lo que siga — pero comparte el mismo origen y la misma forma de construir.</p>
-
-    <div class="counters" id="counters">
-      <div class="counter">
-        <span class="counter__num" id="c-empresas">0</span>
-        <span class="counter__label">divisiones activas</span>
+<header class="hero" id="inicio">
+  <div class="glow glow--a"></div><div class="glow glow--b"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <h1>Tecnología y deporte, <span>construidos con datos.</span></h1>
+      <p class="lead">Syntrix Group reúne dos empresas con una misma forma de trabajar: Syntrix Devs desarrolla tecnología e innovación, y Syntrix Sports analiza el fútbol internacional con criterio y profundidad.</p>
+      <div class="cta">
+        <a href="#divisiones" class="btn btn--main">Conocer las divisiones</a>
+        <a href="#canales" class="btn">Ver nuestros canales</a>
       </div>
-      <div class="counter">
-        <span class="counter__num" id="c-redes">0</span>
-        <span class="counter__label">canales conectados</span>
-      </div>
-      <div class="counter">
-        <span class="counter__num" id="c-anio">0</span>
-        <span class="counter__label">en marcha desde</span>
+      <div class="stats">
+        <div class="stat"><b data-n="2">0</b><small>empresas activas</small></div>
+        <div class="stat"><b data-n="2024">0</b><small>año de inicio</small></div>
+        <div class="stat"><b data-n="13">0</b><small>canales públicos</small></div>
       </div>
     </div>
-  </div>
 
-  <div class="hero__orbit" aria-hidden="true">
-    <svg id="orbit-svg" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle class="orbit-ring" cx="210" cy="210" r="150" stroke="#1B2029" stroke-width="1"/>
-      <circle class="orbit-ring orbit-ring--inner" cx="210" cy="210" r="94" stroke="#1B2029" stroke-width="1"/>
+    <div class="hero__atom" aria-hidden="true">
+      <svg id="atom" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="og" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#9a8cff"/><stop offset="1" stop-color="#3fb6ff"/>
+          </linearGradient>
+          <radialGradient id="core" cx="38%" cy="32%" r="75%">
+            <stop offset="0" stop-color="#c2fff2"/><stop offset=".45" stop-color="#4de0c0"/><stop offset="1" stop-color="#0d4f47"/>
+          </radialGradient>
+          <filter id="blur" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="5"/></filter>
+        </defs>
 
-      <g id="orbit-outer" class="orbit-spin">
-        <g class="orbit-node orbit-node--sports" transform="translate(210,60)">
-          <circle r="24" fill="#151920" stroke="#7C8CFF" stroke-width="1.5"/>
-          <g class="orbit-node__counter-spin">
-            <text text-anchor="middle" dy="5" class="orbit-node__label">Sports</text>
+        <circle class="atom-ring" cx="240" cy="240" r="230"/>
+        <circle class="atom-ring atom-ring--in" cx="240" cy="240" r="205"/>
+
+        <!-- Órbita 1 -->
+        <g>
+          <ellipse class="orb" cx="240" cy="240" rx="190" ry="68" stroke="url(#og)"/>
+          <ellipse class="orb orb--flow" cx="240" cy="240" rx="190" ry="68" stroke="url(#og)"/>
+          <g>
+            <circle r="11" fill="#9a8cff" filter="url(#blur)" opacity=".9"/><circle r="4.5" fill="#e9e5ff"/>
+            <animateMotion dur="9s" repeatCount="indefinite" path="M50,240 a190,68 0 1,0 380,0 a190,68 0 1,0 -380,0"/>
           </g>
         </g>
-        <g class="orbit-node orbit-node--next" transform="translate(70,320)">
-          <circle r="13" fill="none" stroke="#565F70" stroke-width="1" stroke-dasharray="3 3"/>
-        </g>
-      </g>
 
-      <g id="orbit-inner" class="orbit-spin orbit-spin--reverse">
-        <g class="orbit-node orbit-node--devs" transform="translate(210,116)">
-          <circle r="22" fill="#151920" stroke="#4CE0B3" stroke-width="1.5"/>
-          <g class="orbit-node__counter-spin orbit-node__counter-spin--reverse">
-            <text text-anchor="middle" dy="5" class="orbit-node__label">Devs</text>
+        <!-- Órbita 2 -->
+        <g transform="rotate(60 240 240)">
+          <ellipse class="orb" cx="240" cy="240" rx="190" ry="68" stroke="url(#og)"/>
+          <ellipse class="orb orb--flow orb--b" cx="240" cy="240" rx="190" ry="68" stroke="url(#og)"/>
+          <g>
+            <circle r="11" fill="#3fb6ff" filter="url(#blur)" opacity=".9"/><circle r="4.5" fill="#dff3ff"/>
+            <animateMotion dur="12s" begin="-4s" repeatCount="indefinite" path="M50,240 a190,68 0 1,0 380,0 a190,68 0 1,0 -380,0"/>
           </g>
         </g>
-      </g>
 
-      <circle class="orbit-core" cx="210" cy="210" r="34" fill="#151920" stroke="#4CE0B3" stroke-width="1.5"/>
-      <text x="210" y="215" text-anchor="middle" class="orbit-core__label">SNX</text>
-    </svg>
+        <!-- Órbita 3 -->
+        <g transform="rotate(120 240 240)">
+          <ellipse class="orb" cx="240" cy="240" rx="190" ry="68" stroke="url(#og)"/>
+          <ellipse class="orb orb--flow orb--c" cx="240" cy="240" rx="190" ry="68" stroke="url(#og)"/>
+          <g>
+            <circle r="11" fill="#4de0c0" filter="url(#blur)" opacity=".9"/><circle r="4.5" fill="#dcfff7"/>
+            <animateMotion dur="15s" begin="-9s" repeatCount="indefinite" path="M50,240 a190,68 0 1,0 380,0 a190,68 0 1,0 -380,0"/>
+          </g>
+        </g>
+
+        <!-- Núcleo -->
+        <circle class="core-pulse" cx="240" cy="240" r="30"/>
+        <circle class="core-pulse core-pulse--2" cx="240" cy="240" r="30"/>
+        <circle cx="240" cy="240" r="34" fill="url(#core)"/>
+        <circle cx="240" cy="240" r="34" stroke="#4de0c0" stroke-opacity=".5" stroke-width="1"/>
+
+        <!-- Puntos de datos -->
+        <circle class="spark" cx="92" cy="120" r="2"/>
+        <circle class="spark spark--2" cx="400" cy="140" r="2"/>
+        <circle class="spark spark--3" cx="70" cy="330" r="2"/>
+        <circle class="spark" cx="410" cy="360" r="2"/>
+        <circle class="spark spark--2" cx="240" cy="22" r="2"/>
+      </svg>
+    </div>
   </div>
 </header>
 
-<main class="divisions">
-  <div class="division-row" id="division-devs">
-    <div class="division-row__media">
-      <img src="logos/syntrix-devs.png" alt="Logo Syntrix Devs" onerror="this.remove(); this.nextElementSibling.style.display='flex';">
-      <div class="division-row__fallback" style="display:none;"><i class="fa-solid fa-code"></i></div>
+<hr class="rule">
+
+<section id="grupo"><div class="wrap">
+  <div class="about">
+    <div class="rv">
+      <div class="head" style="margin-bottom:28px"><h2>Un grupo empresarial que crece por áreas, no por azar.</h2></div>
+      <p>Desde 2024 construimos Syntrix Group con una idea simple: cada empresa trabaja en su terreno, pero comparte la tecnología, los criterios y la identidad del grupo.</p>
+      <p>Lo que Syntrix Devs desarrolla alimenta a Syntrix Sports, y lo que Syntrix Sports aprende del público orienta lo que Syntrix Devs construye después.</p>
     </div>
-    <div class="division-row__body">
-      <h2>Syntrix Devs</h2>
-      <p>Desarrollo de software y productos digitales para el grupo y sus clientes.</p>
-      <a href="html/devs.html" class="division-row__link">Ver canales de Devs <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="pillars rv">
+      <div class="pillar"><h3>Tecnología propia</h3><p>Herramientas y productos creados dentro del grupo para usarlos en cada división.</p></div>
+      <div class="pillar"><h3>Análisis con criterio</h3><p>Lectura del juego basada en datos, contexto y opinión argumentada.</p></div>
+      <div class="pillar"><h3>Identidad compartida</h3><p>Dos marcas distintas, una misma base visual y una misma manera de comunicar.</p></div>
     </div>
   </div>
+</div></section>
 
-  <div class="division-row division-row--reverse" id="division-sports">
-    <div class="division-row__media division-row__media--sports">
-      <img src="logos/syntrix-sports.png" alt="Logo Syntrix Sports" onerror="this.remove(); this.nextElementSibling.style.display='flex';">
-      <div class="division-row__fallback" style="display:none;"><i class="fa-solid fa-chart-line"></i></div>
+<section id="divisiones" style="padding-top:0"><div class="wrap">
+  <div class="head rv"><h2>Nuestras empresas</h2><p>Dos divisiones activas, cada una con su equipo, su audiencia y sus canales.</p></div>
+
+  <article class="div div--devs rv">
+    <div class="div__logo"><img src="logos/syntrix-devs.png" alt="Logo de Syntrix Devs"></div>
+    <div class="div__body">
+      <h3>Syntrix Devs</h3>
+      <p>Desarrollo de software, tecnología e innovación. Construimos productos digitales y exploramos hacia dónde va el futuro tecnológico.</p>
+      <ul class="tags"><li>Desarrollo de software</li><li>Innovación</li><li>Productos digitales</li><li>Futuro tecnológico</li></ul>
+      <a href="html/devs.html" class="btn">Ir a Syntrix Devs</a>
     </div>
-    <div class="division-row__body">
-      <h2>Syntrix Sports</h2>
-      <p>Analítica deportiva y organización de torneos.</p>
-      <a href="html/sports.html" class="division-row__link division-row__link--sports">Ver canales de Sports <i class="fa-solid fa-arrow-right"></i></a>
+  </article>
+
+  <article class="div div--sports rv">
+    <div class="div__logo"><img src="logos/syntrix-sports.png" alt="Logo de Syntrix Sports"></div>
+    <div class="div__body">
+      <h3>Syntrix Sports</h3>
+      <p>Análisis de partidos de fútbol internacional, noticias, comentarios posteriores a cada juego y todo lo que pasa en el mundo del deporte.</p>
+      <ul class="tags"><li>Análisis de partidos</li><li>Noticias deportivas</li><li>Comentarios post partido</li><li>Fútbol internacional</li></ul>
+      <a href="html/sports.html" class="btn">Ir a Syntrix Sports</a>
+    </div>
+  </article>
+</div></section>
+<section id="alianzas" style="padding-top:0"><div class="wrap">
+  <div class="head rv"><h2>Alianzas y colaboraciones</h2><p>Las empresas con las que trabajamos actualmente.</p></div>
+
+  <div class="partners">
+    <!-- Una tarjeta por aliado. Copia y pega este bloque para cada empresa. -->
+    <article class="partner rv">
+      <div class="partner__logo">
+        <img src="https://instagram.feoh1-1.fna.fbcdn.net/v/t51.82787-19/719918819_18127808251544234_5032590592555253705_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=EZsoS2eAQwUQ7kNvwEjuNCw&_nc_oc=AdqUdluV6W5I2ZoKk2EsXuDYW627GlHKDD5VkutHJ63Dg_1e4g56AmMsV7tr4ap2kW5SgTTMqqBmALEssbBWn0Dn&_nc_zt=24&_nc_ht=instagram.feoh1-1.fna&_nc_gid=YsZhoIIKlAcEu-4X-vpHIg&_nc_ss=7b6a8&oh=00_AQPeyDiqUEMi3HDLIm3Snu_vkd9H_cSaiEUz4IcXLI3YWA&oe=6AD8945C" alt="Logo de GUREKA STORE">
+       </div>
+        <div>
+        <h3>GUREKA STORE</h3>
+        <small>Moda</small>
+        <p>Nuestra alianza con GUREKA STORE permite ofrecer a nuestros usuarios productos de alta calidad en el ámbito de la moda urbana y juvenil.</p>
+      </div>
+    </article>
+  </div>
+<!-- 
+  <div class="partners__more rv">
+    <a class="btn" href="html/alianzas.html">Ver todas las alianzas</a>
+  </div>
+   -->
+</div></section>
+<section id="enfoque" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="head rv"><h2>Cómo trabajamos</h2><p>Tres principios que aplican igual en el código y en el análisis deportivo.</p></div>
+  <div class="grid3">
+    <div class="card rv"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l4-5 3 3 5-7"/></svg><h3>Datos primero</h3><p>Cada conclusión parte de información verificable, sea una métrica de producto o una estadística de partido.</p></div>
+    <div class="card rv"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><h3>Construimos lo que usamos</h3><p>Desarrollamos nuestras propias herramientas para que el grupo avance más rápido y con más control.</p></div>
+    <div class="card rv"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></svg><h3>Comunicación clara</h3><p>Contenido directo, constante y fácil de entender, en cada plataforma donde estamos presentes.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="head rv"><h2>Nuestro recorrido</h2></div>
+  <ol class="tl rv">
+    <li><b>2024 — Nace el grupo</b><span>Comenzamos a construir Syntrix Group con sus dos primeras empresas.</span></li>
+    <li><b>Presencia en redes</b><span>Desplegamos los canales de Syntrix Devs y Syntrix Sports en las principales plataformas.</span></li>
+    <li><b>Sitio oficial del grupo</b><span>Esta página reúne la identidad, las empresas y los canales en un solo lugar.</span></li>
+  </ol>
+</div></section>
+
+<section id="tecnologias" style="padding-top:0"><div class="wrap">
+  <div class="head rv"><h2>La tecnología con la que trabajamos</h2><p>Estas son las herramientas que usamos para construir productos y analizar partidos, compartidas por las dos empresas.</p></div>
+  <div class="legend rv">
+    <span><i style="background:var(--devs)"></i>Desarrollo web</span>
+    <span><i style="background:var(--sports)"></i>Datos y análisis</span>
+    <span><i style="background:var(--mint)"></i>IA y automatización</span>
+    <span><i style="background:#c7d2e4"></i>Infraestructura y herramientas</span>
+  </div>
+</div>
+
+<div class="mq rv" aria-label="Tecnologías que usamos">
+  <div class="mq__track" style="--dur:55s">
+    <div class="chip t-dev"><i class="fa-brands fa-html5"></i>HTML5</div>
+    <div class="chip t-dev"><i class="fa-brands fa-css3-alt"></i>CSS3</div>
+    <div class="chip t-dev"><i class="fa-brands fa-js"></i>JavaScript</div>
+    <div class="chip t-dev"><i class="fa-brands fa-php"></i>PHP</div>
+    <div class="chip t-dev"><i class="fa-solid fa-server"></i>XAMPP</div>
+    <div class="chip t-infra"><i class="fa-brands fa-github"></i>Git y GitHub</div>
+    <div class="chip t-infra"><i class="fa-solid fa-plug"></i>APIs</div>
+    <div class="chip t-infra"><i class="fa-solid fa-cloud"></i>Despliegue en la nube</div>
+    <div class="chip t-infra"><i class="fa-solid fa-pen-ruler"></i>Diseño de interfaces</div>
+  </div>
+</div>
+
+<div class="mq mq--rev rv" aria-hidden="true">
+  <div class="mq__track" style="--dur:65s">
+    <div class="chip t-data"><i class="fa-brands fa-python"></i>Python</div>
+    <div class="chip t-data"><i class="fa-solid fa-database"></i>SQL</div>
+    <div class="chip t-data"><i class="fa-solid fa-futbol"></i>Estadística deportiva</div>
+    <div class="chip t-data"><i class="fa-solid fa-chart-pie"></i>Visualización de datos</div>
+    <div class="chip t-ai"><i class="fa-solid fa-robot"></i>Modelos de lenguaje</div>
+    <div class="chip t-ai"><i class="fa-solid fa-brain"></i>Análisis predictivo</div>
+    <div class="chip t-ai"><i class="fa-solid fa-wand-magic-sparkles"></i>Automatización de contenido</div>
+  </div>
+</div>
+</section>
+
+<section id="contacto" style="padding-top:0"><div class="wrap">
+  <div class="final rv">
+    <h2>¿Quieres seguir lo que construimos?</h2>
+    <p>Síguenos en la empresa que más te interese y escríbenos por mensaje directo para colaborar o resolver dudas.</p>
+    <div class="cta">
+      <a class="btn btn--main" href="https://instagram.com/syntrixdevs" target="_blank" rel="noopener">Escribir a Devs</a>
+      <a class="btn" href="https://instagram.com/syntrixsports" target="_blank" rel="noopener">Escribir a Sports</a>
     </div>
   </div>
-</main>
+</div></section>
 
-<footer class="hub-footer">
-  <span>© <span id="year"></span> Grupo Syntrix</span>
-  <div class="hub-footer__social">
-    <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
-    <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
-  </div>
-</footer>
+<footer><div class="wrap">
+  <span>© <span id="y"></span> Syntrix Group. Todos los derechos reservados.</span>
+  <span>Syntrix Devs · Syntrix Sports</span>
+</div></footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="js/orbit.js"></script>
 <script src="js/index.js"></script>
+<script src="js/extras.js"></script>
 </body>
 </html>

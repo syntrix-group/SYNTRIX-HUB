@@ -1,39 +1,26 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('y').textContent=new Date().getFullYear();
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function count(el){var t=+el.dataset.n;if(reduce){el.textContent=t;return}
+var s=performance.now(),d=1400;(function f(n){var p=Math.min((n-s)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);so.unobserve(e.target)}})},{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(function(e){so.observe(e)});
 
-const socialChannels = [
-  'instagram-devs','tiktok-devs','telegram-devs','facebook-devs',
-  'youtube-devs','whatsapp-devs','x-devs','threads-devs',
-  'instagram-sports','tiktok-sports','facebook-sports','x-sports',
-  'threads-sports','youtube-sports','kick-sports','whatsapp-sports'
-];
-
-const divisionCount = document.querySelectorAll('.division-row').length;
-
-const counters = [
-  { el: document.getElementById('c-empresas'), target: divisionCount },
-  { el: document.getElementById('c-redes'), target: socialChannels.length },
-  { el: document.getElementById('c-anio'), target: 2025 }
-];
-
-function animateCounter({ el, target }) {
-  const duration = 1100;
-  const start = performance.now();
-  function tick(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(eased * target);
-    if (progress < 1) requestAnimationFrame(tick);
+/* Menú: resalta la sección visible */
+var links=document.querySelectorAll('.nav ul a');
+var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(function(e){spy.observe(e)});
+var atom=document.getElementById('atom');
+if(reduce&&atom&&atom.pauseAnimations)atom.pauseAnimations();
+/* Carrusel: repite el contenido 4 veces para que el bucle sea continuo */
+document.querySelectorAll('.mq__track').forEach(function(track){
+  var set=Array.from(track.children);
+  for(var i=0;i<3;i++){
+    set.forEach(function(el){
+      var c=el.cloneNode(true);
+      c.setAttribute('aria-hidden','true');
+      track.appendChild(c);
+    });
   }
-  requestAnimationFrame(tick);
-}
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      counters.forEach(animateCounter);
-      observer.disconnect();
-    }
-  });
-}, { threshold: 0.4 });
-
-observer.observe(document.getElementById('counters'));
+});

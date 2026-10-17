@@ -1,42 +1,31 @@
-const devsLinks = [
-  { name: 'Instagram', icon: 'fa-brands fa-instagram', url: 'https://www.instagram.com/syntrixdevs' },
-  { name: 'TikTok', icon: 'fa-brands fa-tiktok', url: 'https://www.tiktok.com/@syntrix_devs_oficial' },
-  { name: 'Telegram', icon: 'fa-brands fa-telegram', url: 'https://t.me/syntrix_devs' },
-  { name: 'Facebook', icon: 'fa-brands fa-facebook', url: 'https://www.facebook.com/SyntrixDevs/' },
-  { name: 'YouTube', icon: 'fa-brands fa-youtube', url: 'https://www.youtube.com/@syntrix_devs' },
-  { name: 'WhatsApp', icon: 'fa-brands fa-whatsapp', url: 'https://whatsapp.com/channel/0029Vb33LlIIXnlr8z9LQD3t' },
-  { name: 'X', icon: 'fa-brands fa-x-twitter', url: 'https://x.com/SYNTRYXDEV2y' },
-  { name: 'Threads', icon: 'fa-brands fa-threads', url: 'https://www.threads.com/@syntrix_devs_oficial' }
+const channels = [
+  { name:'Instagram', icon:'fa-brands fa-instagram', handle:'@syntrixdevs', url:'https://www.instagram.com/syntrixdevs' },
+  { name:'TikTok', icon:'fa-brands fa-tiktok', handle:'@syntrix_devs_oficial', url:'https://www.tiktok.com/@syntrix_devs_oficial' },
+  { name:'YouTube', icon:'fa-brands fa-youtube', handle:'@syntrix_devs', url:'https://www.youtube.com/@syntrix_devs' },
+  { name:'Facebook', icon:'fa-brands fa-facebook', handle:'SyntrixDevs', url:'https://www.facebook.com/SyntrixDevs/' },
+  { name:'Threads', icon:'fa-brands fa-threads', handle:'@syntrix_devs_oficial', url:'https://www.threads.com/@syntrix_devs_oficial' },
+  { name:'X', icon:'fa-brands fa-x-twitter', handle:'@SYNTRYXDEV2y', url:'https://x.com/SYNTRYXDEV2y' },
+  { name:'Kick', icon:'fa-solid fa-bolt', handle:'Próximamente', url:'' },
+  { name:'Telegram', icon:'fa-brands fa-telegram', handle:'Próximamente', url:'' },
+  { name:'WhatsApp', icon:'fa-brands fa-whatsapp', handle:'Próximamente', url:'' }
 ];
 
-const grid = document.getElementById('links-grid');
-document.getElementById('link-count').textContent = devsLinks.length;
+const grid = document.getElementById('grid');
+const activos = channels.filter(c => c.url).length;
+document.getElementById('count').textContent = activos;
+document.getElementById('count-soon').textContent = channels.length - activos;
 
-devsLinks.forEach(link => {
-  const a = document.createElement('a');
-  a.href = link.url;
-  a.target = '_blank';
-  a.rel = 'noopener';
-  a.className = 'd-link-row';
-  a.innerHTML = `<i class="${link.icon}"></i><span>${link.name}</span><i class="fa-solid fa-arrow-up-right"></i>`;
-
-  a.addEventListener('click', (e) => {
-    e.preventDefault();
-    Swal.fire({
-      title: `Ir a ${link.name}`,
-      text: 'Vas a salir de Syntrix Devs.',
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonText: 'Continuar',
-      cancelButtonText: 'Cancelar',
-      background: '#151920',
-      color: '#EDEFF3',
-      confirmButtonColor: '#4CE0B3',
-      cancelButtonColor: '#262B33'
-    }).then((result) => {
-      if (result.isConfirmed) window.open(link.url, '_blank');
-    });
-  });
-
-  grid.appendChild(a);
+channels.forEach(c => {
+  const el = document.createElement(c.url ? 'a' : 'div');
+  el.className = 'ch rv' + (c.url ? '' : ' soon');
+  if (c.url) { el.href = c.url; el.target = '_blank'; el.rel = 'noopener'; }
+  el.innerHTML = `<i class="${c.icon}"></i><div><b>${c.name}</b><small>${c.handle}</small></div>`;
+  grid.appendChild(el);
 });
+
+document.getElementById('y').textContent = new Date().getFullYear();
+
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .15 });
+document.querySelectorAll('.rv').forEach(e => io.observe(e));

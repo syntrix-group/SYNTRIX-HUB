@@ -1,12 +1,31 @@
 :root{
-  --bg: #0B0D10;
-  --panel: #151920;
-  --line: #262B33;
-  --text: #EDEFF3;
-  --muted: #8D94A3;
-  --accent: #4CE0B3;
-  --accent-dim: #2E7C63;
-  --accent-2: #7C8CFF;
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Base */
+  --bg:#06080c;
+  --surface:#0d1117;
+  --surface2:#121823;
+  --line:#1c2430;
+  --text:#e8edf5;
+  --muted:#8a96a8;
+
+  /* Marca */
+  --devs:#9a8cff;      /* violeta · Syntrix Devs */
+  --sports:#3fb6ff;    /* azul · Syntrix Sports */
+  --mint:#4de0c0;      /* menta · Syntrix Group */
+
+  /* Tipografía */
+  --display:'Sora',system-ui,sans-serif;
+  --body:'Manrope',system-ui,sans-serif;
+
+  /* Alias de la versión anterior (para devs.html, sports.html y otros archivos) */
+  --panel:var(--surface);
+  --accent:var(--mint);
+  --accent-dim:#2f8f78;
+  --accent-2:var(--devs);
+  --font-display:var(--display);
+  --font-body:var(--body);
+
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
 }
